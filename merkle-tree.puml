@@ -1,0 +1,23 @@
+@startdot
+graph merkletree {
+    h0[label="root hash"]
+    h1[label="hash"]
+    h2[label="hash"]
+    blockAhash[label="hash"]
+    blockBhash[label="hash"]
+    blockChash[label="hash"]
+    blockDhash[label="hash"]
+    a[label="Block A",shape=box]
+    b[label="Block B",shape=box]
+    c[label="Block C",shape=box]
+    d[label="Block D",shape=box]
+
+    h0 -- {h1, h2}
+    h1 -- {blockAhash, blockBhash}
+    h2 -- {blockChash, blockDhash}
+    blockAhash -- a
+    blockBhash -- b
+    blockChash -- c
+    blockDhash -- d
+}
+@enddot
